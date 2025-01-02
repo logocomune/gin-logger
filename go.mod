@@ -1,4 +1,4 @@
-module gilhub.com/logocomune/gin-logger
+module github.com/logocomune/gin-logger
 
 go 1.23
 

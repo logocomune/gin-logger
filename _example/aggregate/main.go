@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	slogger "gilhub.com/logocomune/gin-logger"
 	"github.com/gin-gonic/gin"
+	"github.com/logocomune/gin-logger"
 	"log/slog"
 )
 
