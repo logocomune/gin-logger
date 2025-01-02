@@ -161,13 +161,10 @@ func configure(opts ...Option) *conf {
 			}
 			return route
 		},
-		excludedPaths:    []string{"/health", "/api/health", "/metrics", "/api/metrics", "/static"},
-		clientIPHeaders:  []string{"x-CF-Connecting-IP", "X-CF-Connecting-IP", "X-Forwarded-For", "X-Real-IP"},
-		userAgentHeaders: []string{"x-user-agent", "user-agent"},
-		logHeadersWithName: map[string][]string{
-			"country": {"x-cf-ipcountry", "cf-ipcountry"},
-			"referer": {"x-referer", "referer"},
-		},
+		excludedPaths:        []string{},            // eg: []string{"/health", "/api/health", "/metrics", "/api/metrics", "/static"},
+		clientIPHeaders:      []string{},            //[]string{"x-CF-Connecting-IP", "X-CF-Connecting-IP", "X-Forwarded-For", "X-Real-IP"},
+		userAgentHeaders:     []string{},            //[]string{"x-user-agent", "user-agent"},
+		logHeadersWithName:   map[string][]string{}, //map[string][]string{"country": {"x-cf-ipcountry", "cf-ipcountry"},"referer": {"x-referer", "referer"},},
 		staticLogEntries:     map[string]string{},
 		isAggregationEnabled: false,
 		aggregationQueueSize: 100,
